@@ -15,13 +15,15 @@
 		11EA6A6A1912C70400F5C84F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EA6A691912C70400F5C84F /* AppDelegate.m */; };
 		11EA6A6D1912C70400F5C84F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EA6A6B1912C70400F5C84F /* Main_iPhone.storyboard */; };
 		11EA6A701912C70400F5C84F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EA6A6E1912C70400F5C84F /* Main_iPad.storyboard */; };
-		11EA6A731912C70400F5C84F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EA6A721912C70400F5C84F /* ViewController.m */; };
 		11EA6A751912C70400F5C84F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11EA6A741912C70400F5C84F /* Images.xcassets */; };
 		11EA6A7C1912C70500F5C84F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EA6A7B1912C70500F5C84F /* XCTest.framework */; };
 		11EA6A7D1912C70500F5C84F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EA6A591912C70400F5C84F /* Foundation.framework */; };
 		11EA6A7E1912C70500F5C84F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EA6A5D1912C70400F5C84F /* UIKit.framework */; };
 		11EA6A861912C70500F5C84F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11EA6A841912C70500F5C84F /* InfoPlist.strings */; };
 		11EA6A881912C70500F5C84F /* PTDatePickerCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EA6A871912C70500F5C84F /* PTDatePickerCellTests.m */; };
+		11EA6A941912C73E00F5C84F /* PTDatePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EA6A921912C73E00F5C84F /* PTDatePickerCell.m */; };
+		11EA6A951912C73E00F5C84F /* PTDatePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11EA6A931912C73E00F5C84F /* PTDatePickerCell.xib */; };
+		11EA6A981912C75000F5C84F /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EA6A971912C75000F5C84F /* MyTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +49,17 @@
 		11EA6A691912C70400F5C84F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		11EA6A6C1912C70400F5C84F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		11EA6A6F1912C70400F5C84F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		11EA6A711912C70400F5C84F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		11EA6A721912C70400F5C84F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		11EA6A741912C70400F5C84F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		11EA6A7A1912C70500F5C84F /* PTDatePickerCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PTDatePickerCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11EA6A7B1912C70500F5C84F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		11EA6A831912C70500F5C84F /* PTDatePickerCellTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PTDatePickerCellTests-Info.plist"; sourceTree = "<group>"; };
 		11EA6A851912C70500F5C84F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		11EA6A871912C70500F5C84F /* PTDatePickerCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTDatePickerCellTests.m; sourceTree = "<group>"; };
+		11EA6A911912C73E00F5C84F /* PTDatePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDatePickerCell.h; sourceTree = "<group>"; };
+		11EA6A921912C73E00F5C84F /* PTDatePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTDatePickerCell.m; sourceTree = "<group>"; };
+		11EA6A931912C73E00F5C84F /* PTDatePickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTDatePickerCell.xib; sourceTree = "<group>"; };
+		11EA6A961912C75000F5C84F /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		11EA6A971912C75000F5C84F /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +123,11 @@
 				11EA6A691912C70400F5C84F /* AppDelegate.m */,
 				11EA6A6B1912C70400F5C84F /* Main_iPhone.storyboard */,
 				11EA6A6E1912C70400F5C84F /* Main_iPad.storyboard */,
-				11EA6A711912C70400F5C84F /* ViewController.h */,
-				11EA6A721912C70400F5C84F /* ViewController.m */,
+				11EA6A961912C75000F5C84F /* MyTableViewController.h */,
+				11EA6A971912C75000F5C84F /* MyTableViewController.m */,
+				11EA6A911912C73E00F5C84F /* PTDatePickerCell.h */,
+				11EA6A921912C73E00F5C84F /* PTDatePickerCell.m */,
+				11EA6A931912C73E00F5C84F /* PTDatePickerCell.xib */,
 				11EA6A741912C70400F5C84F /* Images.xcassets */,
 				11EA6A601912C70400F5C84F /* Supporting Files */,
 			);
@@ -231,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11EA6A951912C73E00F5C84F /* PTDatePickerCell.xib in Resources */,
 				11EA6A701912C70400F5C84F /* Main_iPad.storyboard in Resources */,
 				11EA6A751912C70400F5C84F /* Images.xcassets in Resources */,
 				11EA6A6D1912C70400F5C84F /* Main_iPhone.storyboard in Resources */,
@@ -253,7 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11EA6A731912C70400F5C84F /* ViewController.m in Sources */,
+				11EA6A981912C75000F5C84F /* MyTableViewController.m in Sources */,
+				11EA6A941912C73E00F5C84F /* PTDatePickerCell.m in Sources */,
 				11EA6A6A1912C70400F5C84F /* AppDelegate.m in Sources */,
 				11EA6A661912C70400F5C84F /* main.m in Sources */,
 			);
