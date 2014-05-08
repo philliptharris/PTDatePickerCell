@@ -8,12 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol PTDatePickerCellDelegate;
+
 extern NSString * const PTDatePickerCellReuseIdentifier;
 
 @interface PTDatePickerCell : UITableViewCell
 
+@property (nonatomic, weak) id <PTDatePickerCellDelegate> delegate;
+
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 
+/// Optional. Use this if you want the cell to bind the date to a key in NSUserDefaults representing an NSDate object.
+@property (nonatomic, strong) NSString *userDefaultsDateKey;
+
 - (IBAction)datePickerValueDidChange:(id)sender;
+
+@end
+
+
+@protocol PTDatePickerCellDelegate <NSObject>
+
+@optional
+- (void)datePickerCellValueDidChange:(PTDatePickerCell *)cell;
 
 @end

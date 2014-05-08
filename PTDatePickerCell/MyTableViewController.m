@@ -10,7 +10,7 @@
 
 #import "PTDatePickerCell.h"
 
-@interface MyTableViewController ()
+@interface MyTableViewController () <PTDatePickerCellDelegate>
 
 @end
 
@@ -47,6 +47,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     PTDatePickerCell *cell = [tableView dequeueReusableCellWithIdentifier:PTDatePickerCellReuseIdentifier forIndexPath:indexPath];
+    cell.delegate = self;
+    cell.userDefaultsDateKey = @"MyDateKey";
     
     return cell;
 }
@@ -58,6 +60,15 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 163.0;
+}
+
+//===============================================
+#pragma mark -
+#pragma mark PTDatePickerCellDelegate
+//===============================================
+
+- (void)datePickerCellValueDidChange:(PTDatePickerCell *)cell {
+    NSLog(@"datePickerCellValueDidChange");
 }
 
 @end

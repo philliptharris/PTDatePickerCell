@@ -50,12 +50,35 @@ NSString * const PTDatePickerCellReuseIdentifier = @"PTDatePickerCellReuseIdenti
 
 //===============================================
 #pragma mark -
+#pragma mark Setters
+//===============================================
+
+- (void)setUserDefaultsDateKey:(NSString *)userDefaultsDateKey {
+    
+    _userDefaultsDateKey = userDefaultsDateKey;
+    
+    NSDate *date = [[NSUserDefaults standardUserDefaults] objectForKey:userDefaultsDateKey];
+    
+    if (date && [date isKindOfClass:[NSDate class]]) {
+        [self.datePicker setDate:date animated:NO];
+    }
+}
+
+//===============================================
+#pragma mark -
 #pragma mark Actions
 //===============================================
 
 - (IBAction)datePickerValueDidChange:(id)sender {
     
+    if ([self.delegate respondsToSelector:@selector(datePickerCellValueDidChange:)]) {
+        [self.delegate datePickerCellValueDidChange:self];
+    }
     
+    if (self.userDefaultsDateKey) {
+        [[NSUserDefaults standardUserDefaults] setObject:self.datePicker.date forKey:self.userDefaultsDateKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
 
 @end
