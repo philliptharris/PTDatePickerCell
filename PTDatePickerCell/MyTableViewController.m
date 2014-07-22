@@ -37,7 +37,7 @@
 //===============================================
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -48,18 +48,18 @@
     
     PTDatePickerCell *cell = [tableView dequeueReusableCellWithIdentifier:PTDatePickerCellReuseIdentifier forIndexPath:indexPath];
     cell.delegate = self;
-    cell.userDefaultsDateKey = @"MyDateKey";
+    cell.userDefaultsDateKey = [NSString stringWithFormat:@"MyDateKey%i", indexPath.section];
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 163.0;
+    CGFloat height = [PTDatePickerCell preferredHeight];
+    return height;
 }
 
 //===============================================

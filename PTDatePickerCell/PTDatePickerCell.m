@@ -40,8 +40,7 @@ NSString * const PTDatePickerCellReuseIdentifier = @"PTDatePickerCellReuseIdenti
         
         _datePicker.translatesAutoresizingMaskIntoConstraints = NO;
         [self.contentView addSubview:_datePicker];
-        
-        NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(self.contentView, _datePicker);
+        NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(_datePicker);
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_datePicker]|" options:0 metrics:0 views:viewsDictionary]];
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_datePicker]|" options:0 metrics:0 views:viewsDictionary]];
     }
@@ -79,6 +78,26 @@ NSString * const PTDatePickerCellReuseIdentifier = @"PTDatePickerCellReuseIdenti
         [[NSUserDefaults standardUserDefaults] setObject:self.datePicker.date forKey:self.userDefaultsDateKey];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
+}
+
+//===============================================
+#pragma mark -
+#pragma mark Cell Height
+//===============================================
+
++ (CGFloat)preferredHeight {
+    
+    static UIDatePicker *_dateFormatter = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _dateFormatter = [[UIDatePicker alloc] initWithFrame:CGRectZero];
+        _dateFormatter.datePickerMode = UIDatePickerModeDateAndTime;
+        [_dateFormatter sizeToFit];
+    });
+    
+    return 162.0;
+    
+    return CGRectGetHeight(_dateFormatter.bounds); // This is 216 for some reason.
 }
 
 @end

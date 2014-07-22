@@ -23,6 +23,8 @@ extern NSString * const PTDatePickerCellReuseIdentifier;
 
 - (IBAction)datePickerValueDidChange:(id)sender;
 
++ (CGFloat)preferredHeight;
+
 @end
 
 
